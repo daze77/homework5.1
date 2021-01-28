@@ -14,13 +14,14 @@ console.log(hours)
 
 document.querySelector('#currentDay').innerHTML = daysofWeek[currentTime.getDay()] + " - " + months[currentTime.getMonth()] + " " + currentTime.getDate() + ", " + currentTime.getFullYear()
 
-
-
 //convert to milliseconds
 
 var milisecondsPerHour = 3600000
 
+// var articles = document.querySelectorAll('span');
 
+// span.forEach(innerHTML);
+// console.log(span)
 
 console.log(document.querySelectorAll('span').textContent)
 
