@@ -50,14 +50,13 @@ document.querySelector('#currentDay').innerHTML = daysofWeek[currentTime.getDay(
 
 //convert to milliseconds
 
-var milisecondsPerHour = 3600000
+// var milisecondsPerHour = 3600000
 
 // var articles = document.querySelectorAll('span');
 
 // span.forEach(innerHTML);
 // console.log(span)
 
-console.log(document.querySelectorAll('span').textContent)
 
 
 //compare time number in scheduler to current time and add or remmove class based on current time
@@ -83,10 +82,120 @@ console.log(document.querySelectorAll('span').textContent)
 
 
 
+// var time = document.querySelectorAll(".input-group-text");
+// 	for (var i = 0; i < time.length; i++) {
+// 	  console.log('time: ', time[i]);
+// 	}
+
+
+// var time = document.querySelectorAll(".input-group-text");
+// 	for (const fakeImage of time.values()) {
+// 	  console.log('time: ', time);
+// 	};
 
 
 
 
+
+
+
+
+
+
+
+
+    
+
+var timetext = {
+    _1: parseInt(document.querySelectorAll('.input-group-text')[0].innerHTML),
+    _2: parseInt(document.querySelectorAll('.input-group-text')[1].innerHTML),
+    _3: parseInt(document.querySelectorAll('.input-group-text')[2].innerHTML),
+    _4: parseInt(document.querySelectorAll('.input-group-text')[3].innerHTML),
+    _5: parseInt(document.querySelectorAll('.input-group-text')[4].innerHTML),
+    _6: parseInt(document.querySelectorAll('.input-group-text')[5].innerHTML),
+    _7: parseInt(document.querySelectorAll('.input-group-text')[6].innerHTML),
+    _8: parseInt(document.querySelectorAll('.input-group-text')[7].innerHTML),
+    _9: parseInt(document.querySelectorAll('.input-group-text')[8].innerHTML),
+    _10: parseInt(document.querySelectorAll('.input-group-text')[9].innerHTML),
+    _11: parseInt(document.querySelectorAll('.input-group-text')[10].innerHTML),
+    _12: parseInt(document.querySelectorAll('.input-group-text')[11].innerHTML),
+    _13: parseInt(document.querySelectorAll('.input-group-text')[12].innerHTML),
+    _14: parseInt(document.querySelectorAll('.input-group-text')[13].innerHTML),
+    _15: parseInt(document.querySelectorAll('.input-group-text')[14].innerHTML),
+    _16: parseInt(document.querySelectorAll('.input-group-text')[15].innerHTML),
+    _17: parseInt(document.querySelectorAll('.input-group-text')[16].innerHTML),
+    _18: parseInt(document.querySelectorAll('.input-group-text')[17].innerHTML),
+    _19: parseInt(document.querySelectorAll('.input-group-text')[18].innerHTML),
+    _20: parseInt(document.querySelectorAll('.input-group-text')[19].innerHTML),
+    _21: parseInt(document.querySelectorAll('.input-group-text')[20].innerHTML),
+    _22: parseInt(document.querySelectorAll('.input-group-text')[21].innerHTML),
+    _23: parseInt(document.querySelectorAll('.input-group-text')[22].innerHTML),
+    _24: parseInt(document.querySelectorAll('.input-group-text')[23].innerHTML),
+
+}
+
+
+
+
+
+for (y in parseInt(document.querySelector('div').innertext))
+{
+    var y = (y)
+    console.log(y)
+}
+
+for (var x in timetext) {
+    console.log(timetext[x])
+    console.log("Present",Math.floor(timetext[x])===hours)
+    console.log("Past", Math.floor(timetext[x])< hours)
+    console.log("Future",Math.floor(timetext[x])> hours)
+
+    while (Math.floor(timetext[x])===hours ){
+        document.querySelector('input').classList.add("present");    
+    }
+
+
+
+
+}
+
+
+
+
+    // var xx = (x + ":" +  timetext[x])
+    // console.log(xx)
+    // console.log("Future",Math.floor(timetext[x])> hours)
+
+
+
+// console.log("this is the time text", timetext)
+//   for (var i in timetext){
+//       console.log(timetext.length)}
+
+// // function compareTime(){
+//     for (var i  in timetext){i=0; i < timetext.length; i++;
+    
+    
+//     if ( i == hours){
+//         document.querySelector('.form-control').classList.add("present")
+//         document.querySelector('.form-control').classList.remove("future")
+//         document.querySelector('.form-control').classList.remove("past")
+
+//         console.log(i)
+//     }}
+    // else if (i > hours){
+    //         document.querySelector('.form-control').classList.add("future")
+    //         document.querySelector('.form-control').classList.remove("present")
+    //         document.querySelector('.form-control').classList.remove("past")
+
+    //     }
+    // else {
+    //     document.querySelector('.form-control').classList.remove("future")
+    //     document.querySelector('.form-control').classList.remove("present")
+    //     document.querySelector('.form-control').classList.add("past")
+
+    // }
+    
 
 
 
@@ -187,7 +296,3 @@ function saveAgendaLocal(){
 
 }
 saveAgendaLocal()
-
-
-
-
