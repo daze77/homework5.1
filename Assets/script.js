@@ -30,7 +30,7 @@ console.log(moment().format('dddd'))
 // document.querySelector('#currentDay').innerHTML = daysofWeek[currentTime.getDay()] + " - " + months[currentTime.getMonth()] + " " + currentTime.getDate() + ", " + currentTime.getFullYear()
 
 // Date using moment JS
-$('#currentDay').append(currentdayofWeekmomentJS, " ", currentmomentJSDate)
+$('#currentDay').append(currentdayofWeekmomentJS, " - ", currentmomentJSDate)
 
 
 
