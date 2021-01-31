@@ -17,10 +17,21 @@ console.log(daysofWeek)
 console.log(currentTime)
 console.log(currentTime.getDate())
 console.log(hours)
+hoursmomentjs=moment().format('HH')
+console.log(hours)
+console.log(hoursmomentjs)
+currentmomentJSDate = moment().format('LL')
+currentdayofWeekmomentJS = (moment().format('dddd'))
+console.log(moment().format('[today] dddd'))
+console.log(moment().format('dddd'))
 
 
 //add current date and time to top of agenda
-document.querySelector('#currentDay').innerHTML = daysofWeek[currentTime.getDay()] + " - " + months[currentTime.getMonth()] + " " + currentTime.getDate() + ", " + currentTime.getFullYear()
+// document.querySelector('#currentDay').innerHTML = daysofWeek[currentTime.getDay()] + " - " + months[currentTime.getMonth()] + " " + currentTime.getDate() + ", " + currentTime.getFullYear()
+
+// Date using moment JS
+$('#currentDay').append(currentdayofWeekmomentJS, " ", currentmomentJSDate)
+
 
 
 //check local storage for agenda.  
@@ -100,13 +111,13 @@ var time = $('.form-control')
 for (var i =0; i<time.length; i++){
     time.textContent = i
     console.log(time.textContent)
-    if((1+(i)) < hours){
+    if((1+(i)) < hoursmomentjs){
         console.log("past")
         time[i].classList.add("past")
         time[i].classList.remove("present")
         time[i].classList.remove("future")
     }
-    else if((1+(i)) === hours){
+    else if((1+(i)) == hoursmomentjs){
         console.log("Present")
         time[i].classList.add("present")
         time[i].classList.remove("past")
